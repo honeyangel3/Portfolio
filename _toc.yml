@@ -1,0 +1,16 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: Laboratory-Task-2
+  title: Laboratory Task 2
+- file: Laboratory-Task-3
+  title: Laboratory Task 3
+- file: Laboratory-Task-4
+  title: Laboratory Task 4
+- file: Laboratory-Task-5
+  title: Laboratory Task 5
+- file: Laboratory-Activity
+  title: Laboratory Activity
