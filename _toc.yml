@@ -20,6 +20,5 @@ chapters:
   title: Dropout Experiment
 - title: Case Study
     sections:
-      - file: Case Study/week1
-      - file: Case Study/week2
-      - file: Case Study/week3
+      - file: Case Study/week-1
+      - file: Case Study/week-2
