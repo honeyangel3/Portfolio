@@ -21,7 +21,7 @@ chapters:
 - title: Case Study
   sections:
     - file: Case Study/week-1
-    title: Week 1
+      title: Week 1
     - file: Case Study/week-2
-    title: Week 2
+      title: Week 2
     
