@@ -192,6 +192,10 @@
 
 <li class="toctree-l1"><a class="reference internal" href="Laboratory-Task-5.html">Laboratory Task 5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Laboratory-Activity.html">Laboratory Activity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dropout_Blog.html">Deep Learning Blog Post</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dropout_experiment.html">Dropout Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Case%20Study/week-1.html"><strong>Project 2</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Case%20Study/week-2.html"><strong>EQODEC: A Carbon-Aware Deep Learning Framework for Sustainable Video Compression</strong></a></li>
 </ul>
 
     </div>
@@ -526,22 +530,22 @@ torch.Size([15, 2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 73.,  67.,  43.],
-        [ 69.,  96.,  70.],
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 91.,  88.,  64.],
+        [ 87., 134.,  58.],
+        [ 73.,  67.,  43.],
         [102.,  43.,  37.],
-        [102.,  43.,  37.],
+        [ 87., 134.,  58.],
+        [ 91.,  88.,  64.],
         [ 69.,  96.,  70.],
-        [ 91.,  88.,  64.],
-        [ 91.,  88.,  64.],
-        [ 73.,  67.,  43.]])
-tensor([[ 56.,  70.],
-        [103., 119.],
+        [102.,  43.,  37.]])
+tensor([[ 81., 101.],
+        [119., 133.],
+        [ 56.,  70.],
         [ 22.,  37.],
-        [ 22.,  37.],
+        [119., 133.],
+        [ 81., 101.],
         [103., 119.],
-        [ 81., 101.],
-        [ 81., 101.],
-        [ 56.,  70.]])
+        [ 22.,  37.]])
 </pre></div>
 </div>
 </div>
@@ -559,11 +563,11 @@ tensor([[ 56.,  70.],
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameter containing:
-tensor([[-0.2155,  0.5213, -0.4490],
-        [-0.0497,  0.5116, -0.3600]], requires_grad=True)
+tensor([[-0.0158,  0.1440,  0.0245],
+        [ 0.1015,  0.3789, -0.4854]], requires_grad=True)
 torch.Size([2, 3])
 Parameter containing:
-tensor([ 0.4815, -0.2034], requires_grad=True)
+tensor([0.0147, 0.1342], requires_grad=True)
 torch.Size([2])
 </pre></div>
 </div>
@@ -578,10 +582,10 @@ torch.Size([2])
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Parameter containing:
- tensor([[-0.2155,  0.5213, -0.4490],
-         [-0.0497,  0.5116, -0.3600]], requires_grad=True),
+ tensor([[-0.0158,  0.1440,  0.0245],
+         [ 0.1015,  0.3789, -0.4854]], requires_grad=True),
  Parameter containing:
- tensor([ 0.4815, -0.2034], requires_grad=True)]
+ tensor([0.0147, 0.1342], requires_grad=True)]
 </pre></div>
 </div>
 </div>
@@ -608,21 +612,21 @@ torch.Size([2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[  0.3673,  14.9628],
-        [ -1.9948,  17.2507],
-        [ 25.5392,  43.1428],
-        [-15.6971,   3.4035],
-        [  4.2213,  20.2768],
-        [  0.3673,  14.9628],
-        [ -1.9948,  17.2507],
-        [ 25.5392,  43.1428],
-        [-15.6971,   3.4035],
-        [  4.2213,  20.2768],
-        [  0.3673,  14.9628],
-        [ -1.9948,  17.2507],
-        [ 25.5392,  43.1428],
-        [-15.6971,   3.4035],
-        [  4.2213,  20.2768]], grad_fn=&lt;AddmmBackward0&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 9.5644, 12.0540],
+        [12.8186, 11.6430],
+        [19.3582, 31.5778],
+        [ 5.5050,  8.8172],
+        [14.4639,  9.5283],
+        [ 9.5644, 12.0540],
+        [12.8186, 11.6430],
+        [19.3582, 31.5778],
+        [ 5.5050,  8.8172],
+        [14.4639,  9.5283],
+        [ 9.5644, 12.0540],
+        [12.8186, 11.6430],
+        [19.3582, 31.5778],
+        [ 5.5050,  8.8172],
+        [14.4639,  9.5283]], grad_fn=&lt;AddmmBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -647,8 +651,8 @@ torch.Size([2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor(5888.8706, grad_fn=&lt;MseLossBackward0&gt;)
-5888.87060546875
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor(5925.1377, grad_fn=&lt;MseLossBackward0&gt;)
+5925.1376953125
 </pre></div>
 </div>
 </div>
@@ -717,126 +721,112 @@ torch.Size([2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [10/1000], Loss: 159.9445
-Epoch [20/1000], Loss: 1613.9209
-Epoch [30/1000], Loss: 13.2853
-Epoch [40/1000], Loss: 60.4457
-Epoch [50/1000], Loss: 18.0082
-Epoch [60/1000], Loss: 1.4335
-Epoch [70/1000], Loss: 1.8225
-Epoch [80/1000], Loss: 3.4260
-Epoch [90/1000], Loss: 0.8770
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [10/1000], Loss: 47.8839
+Epoch [20/1000], Loss: 554.8007
+Epoch [30/1000], Loss: 4.8916
+Epoch [40/1000], Loss: 6.0869
+Epoch [50/1000], Loss: 1.1783
+Epoch [60/1000], Loss: 0.7266
+Epoch [70/1000], Loss: 2.3411
+Epoch [80/1000], Loss: 1.0798
+Epoch [90/1000], Loss: 1.2377
+Epoch [100/1000], Loss: 0.7911
+Epoch [110/1000], Loss: 0.5108
+Epoch [120/1000], Loss: 0.4775
+Epoch [130/1000], Loss: 4.6986
+Epoch [140/1000], Loss: 0.3880
+Epoch [150/1000], Loss: 0.8613
+Epoch [160/1000], Loss: 0.5828
+Epoch [170/1000], Loss: 0.5949
+Epoch [180/1000], Loss: 0.5772
+Epoch [190/1000], Loss: 5.7108
+Epoch [200/1000], Loss: 0.9762
+Epoch [210/1000], Loss: 0.8560
+Epoch [220/1000], Loss: 0.6764
+Epoch [230/1000], Loss: 0.6171
+Epoch [240/1000], Loss: 1.9233
+Epoch [250/1000], Loss: 0.9662
+Epoch [260/1000], Loss: 0.6345
+Epoch [270/1000], Loss: 0.8688
+Epoch [280/1000], Loss: 2.4977
+Epoch [290/1000], Loss: 0.5943
+Epoch [300/1000], Loss: 0.5907
+Epoch [310/1000], Loss: 0.7456
+Epoch [320/1000], Loss: 0.5808
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [100/1000], Loss: 0.6453
-Epoch [110/1000], Loss: 1.0759
-Epoch [120/1000], Loss: 0.4164
-Epoch [130/1000], Loss: 0.5632
-Epoch [140/1000], Loss: 1.0740
-Epoch [150/1000], Loss: 0.5183
-Epoch [160/1000], Loss: 5.6800
-Epoch [170/1000], Loss: 6.3981
-Epoch [180/1000], Loss: 3.0578
-Epoch [190/1000], Loss: 2.6717
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [330/1000], Loss: 0.8536
+Epoch [340/1000], Loss: 0.4693
+Epoch [350/1000], Loss: 0.8522
+Epoch [360/1000], Loss: 0.5001
+Epoch [370/1000], Loss: 1.6573
+Epoch [380/1000], Loss: 0.7573
+Epoch [390/1000], Loss: 0.8702
+Epoch [400/1000], Loss: 4.1495
+Epoch [410/1000], Loss: 0.5038
+Epoch [420/1000], Loss: 0.4532
+Epoch [430/1000], Loss: 0.7065
+Epoch [440/1000], Loss: 1.0376
+Epoch [450/1000], Loss: 1.1619
+Epoch [460/1000], Loss: 0.6932
+Epoch [470/1000], Loss: 5.9960
+Epoch [480/1000], Loss: 2.1722
+Epoch [490/1000], Loss: 0.7769
+Epoch [500/1000], Loss: 0.8062
+Epoch [510/1000], Loss: 0.5604
+Epoch [520/1000], Loss: 0.9541
+Epoch [530/1000], Loss: 1.3258
+Epoch [540/1000], Loss: 2.6498
+Epoch [550/1000], Loss: 0.5233
+Epoch [560/1000], Loss: 1.7400
+Epoch [570/1000], Loss: 1.5033
+Epoch [580/1000], Loss: 1.4732
+Epoch [590/1000], Loss: 0.8271
+Epoch [600/1000], Loss: 3.5208
+Epoch [610/1000], Loss: 1.8041
+Epoch [620/1000], Loss: 0.9251
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [200/1000], Loss: 0.7171
-Epoch [210/1000], Loss: 0.3864
-Epoch [220/1000], Loss: 2.0165
-Epoch [230/1000], Loss: 0.6009
-Epoch [240/1000], Loss: 0.5946
-Epoch [250/1000], Loss: 2.2029
-Epoch [260/1000], Loss: 0.3867
-Epoch [270/1000], Loss: 0.4024
-Epoch [280/1000], Loss: 3.4418
-Epoch [290/1000], Loss: 7.1962
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [630/1000], Loss: 1.3443
+Epoch [640/1000], Loss: 8.3256
+Epoch [650/1000], Loss: 2.3180
+Epoch [660/1000], Loss: 6.4968
+Epoch [670/1000], Loss: 1.3995
+Epoch [680/1000], Loss: 4.1300
+Epoch [690/1000], Loss: 1.1327
+Epoch [700/1000], Loss: 0.7200
+Epoch [710/1000], Loss: 2.3830
+Epoch [720/1000], Loss: 0.5742
+Epoch [730/1000], Loss: 2.5470
+Epoch [740/1000], Loss: 0.7082
+Epoch [750/1000], Loss: 0.9544
+Epoch [760/1000], Loss: 4.0816
+Epoch [770/1000], Loss: 1.6872
+Epoch [780/1000], Loss: 1.3699
+Epoch [790/1000], Loss: 0.4499
+Epoch [800/1000], Loss: 0.8232
+Epoch [810/1000], Loss: 0.4772
+Epoch [820/1000], Loss: 0.9955
+Epoch [830/1000], Loss: 0.8654
+Epoch [840/1000], Loss: 3.4551
+Epoch [850/1000], Loss: 1.6737
+Epoch [860/1000], Loss: 0.8419
+Epoch [870/1000], Loss: 1.3717
+Epoch [880/1000], Loss: 0.8062
+Epoch [890/1000], Loss: 1.1853
+Epoch [900/1000], Loss: 1.1258
+Epoch [910/1000], Loss: 2.1995
+Epoch [920/1000], Loss: 6.7907
+Epoch [930/1000], Loss: 1.9086
+Epoch [940/1000], Loss: 2.2405
+Epoch [950/1000], Loss: 2.5366
+Epoch [960/1000], Loss: 3.4443
+Epoch [970/1000], Loss: 0.5977
+Epoch [980/1000], Loss: 0.5698
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [300/1000], Loss: 0.3399
-Epoch [310/1000], Loss: 1.7642
-Epoch [320/1000], Loss: 3.0932
-Epoch [330/1000], Loss: 0.5322
-Epoch [340/1000], Loss: 3.2638
-Epoch [350/1000], Loss: 1.0793
-Epoch [360/1000], Loss: 0.6210
-Epoch [370/1000], Loss: 0.7309
-Epoch [380/1000], Loss: 0.6992
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [390/1000], Loss: 3.0849
-Epoch [400/1000], Loss: 2.7510
-Epoch [410/1000], Loss: 1.3002
-Epoch [420/1000], Loss: 0.7861
-Epoch [430/1000], Loss: 0.5151
-Epoch [440/1000], Loss: 1.9272
-Epoch [450/1000], Loss: 0.7837
-Epoch [460/1000], Loss: 0.7112
-Epoch [470/1000], Loss: 0.8520
-Epoch [480/1000], Loss: 0.6753
-Epoch [490/1000], Loss: 5.2523
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [500/1000], Loss: 2.5020
-Epoch [510/1000], Loss: 1.0959
-Epoch [520/1000], Loss: 2.9799
-Epoch [530/1000], Loss: 1.9552
-Epoch [540/1000], Loss: 0.7864
-Epoch [550/1000], Loss: 3.1822
-Epoch [560/1000], Loss: 4.0341
-Epoch [570/1000], Loss: 0.8288
-Epoch [580/1000], Loss: 2.8192
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [590/1000], Loss: 6.6352
-Epoch [600/1000], Loss: 8.8867
-Epoch [610/1000], Loss: 1.7546
-Epoch [620/1000], Loss: 0.6732
-Epoch [630/1000], Loss: 1.1163
-Epoch [640/1000], Loss: 0.6978
-Epoch [650/1000], Loss: 0.4777
-Epoch [660/1000], Loss: 0.6369
-Epoch [670/1000], Loss: 0.8872
-Epoch [680/1000], Loss: 0.7624
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [690/1000], Loss: 0.7790
-Epoch [700/1000], Loss: 0.9313
-Epoch [710/1000], Loss: 0.7470
-Epoch [720/1000], Loss: 0.8379
-Epoch [730/1000], Loss: 0.6330
-Epoch [740/1000], Loss: 0.9073
-Epoch [750/1000], Loss: 0.5356
-Epoch [760/1000], Loss: 0.9294
-Epoch [770/1000], Loss: 0.9071
-Epoch [780/1000], Loss: 0.6888
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [790/1000], Loss: 2.6521
-Epoch [800/1000], Loss: 0.9383
-Epoch [810/1000], Loss: 0.8746
-Epoch [820/1000], Loss: 1.4416
-Epoch [830/1000], Loss: 0.4329
-Epoch [840/1000], Loss: 1.8912
-Epoch [850/1000], Loss: 3.3186
-Epoch [860/1000], Loss: 0.9415
-Epoch [870/1000], Loss: 1.5061
-Epoch [880/1000], Loss: 3.2325
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [890/1000], Loss: 0.8523
-Epoch [900/1000], Loss: 0.8306
-Epoch [910/1000], Loss: 0.8110
-Epoch [920/1000], Loss: 1.0339
-Epoch [930/1000], Loss: 1.2584
-Epoch [940/1000], Loss: 0.6285
-Epoch [950/1000], Loss: 2.1108
-Epoch [960/1000], Loss: 1.7113
-Epoch [970/1000], Loss: 0.7085
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [980/1000], Loss: 1.0583
-Epoch [990/1000], Loss: 1.1593
-Epoch [1000/1000], Loss: 0.6590
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [990/1000], Loss: 0.5193
+Epoch [1000/1000], Loss: 0.6612
 </pre></div>
 </div>
 </div>
@@ -851,7 +841,7 @@ Epoch [1000/1000], Loss: 0.6590
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5599416494369507
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6542503833770752
 </pre></div>
 </div>
 </div>
