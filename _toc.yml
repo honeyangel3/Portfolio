@@ -14,3 +14,7 @@ chapters:
   title: Laboratory Task 5
 - file: Laboratory-Activity
   title: Laboratory Activity
+- file: Dropout_Blog
+  title: Deep Learning Blog Post
+- file: dropout_experiment
+  title: Dropout Experiment
