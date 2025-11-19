@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Notebooks with MyST Markdown &#8212; Portfolio</title>
+    <title>Drop It to Improve It: How Dropout Prevents Overfitting &#8212; Portfolio</title>
   
   
   
@@ -57,9 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'markdown-notebooks';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Dropout_Blog';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dropout Experiment" href="dropout_experiment.html" />
+    <link rel="prev" title="Laboratory Activity" href="Laboratory-Activity.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,7 +179,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Laboratory-Task-2.html">Laboratory Task 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Laboratory-Task-3.html">Laboratory Task 3</a></li>
 
@@ -192,6 +192,8 @@
 
 <li class="toctree-l1"><a class="reference internal" href="Laboratory-Task-5.html">Laboratory Task 5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Laboratory-Activity.html">Laboratory Activity</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Deep Learning Blog Post</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dropout_experiment.html">Dropout Experiment</a></li>
 </ul>
 
     </div>
@@ -263,7 +265,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmarkdown-notebooks.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDropout_Blog.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +295,7 @@
       
       
       
-      <li><a href="_sources/markdown-notebooks.md" target="_blank"
+      <li><a href="_sources/Dropout_Blog.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -303,7 +305,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -377,7 +379,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Notebooks with MyST Markdown</h1>
+    <h1>Drop It to Improve It: How Dropout Prevents Overfitting</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -387,9 +389,33 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">🎯 Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-dropout">🔍 What Is Dropout?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-it-works">Why it Works</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-setup">🧪 Experiment Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">📊 Results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropout-0-0">🔽 Dropout = 0.0</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-accuracy">Test Accuracy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime">Runtime</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropout-0-2">🔽 Dropout = 0.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Test Accuracy</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Runtime</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropout-0-5">🔽 Dropout = 0.5</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Test Accuracy</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Runtime</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropout-0-7">🔽 Dropout = 0.7</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Test Accuracy</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Runtime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-of-findings">🧠 Analysis of Findings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary:</a></li>
 </ul>
             </nav>
         </div>
@@ -401,50 +427,154 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="notebooks-with-myst-markdown">
-<h1>Notebooks with MyST Markdown<a class="headerlink" href="#notebooks-with-myst-markdown" title="Link to this heading">#</a></h1>
-<p>Jupyter Book also lets you write text-based notebooks using MyST Markdown.
-See <a class="reference external" href="https://jupyterbook.org/file-types/myst-notebooks.html">the Notebooks with MyST Markdown documentation</a> for more detailed instructions.
-This page shows off a notebook written in MyST Markdown.</p>
-<section id="an-example-cell">
-<h2>An example cell<a class="headerlink" href="#an-example-cell" title="Link to this heading">#</a></h2>
-<p>With MyST Markdown, you can define code cells with a directive like so:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<p>When your book is built, the contents of any <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> blocks will be
-executed with your default Jupyter kernel, and their outputs will be displayed
-in-line with the rest of your content.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Jupyter Book uses <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/">Jupytext</a> to convert text-based files to notebooks, and can support <a class="reference external" href="https://jupyterbook.org/file-types/jupytext.html">many other text-based notebook files</a>.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="drop-it-to-improve-it-how-dropout-prevents-overfitting">
+<h1>Drop It to Improve It: How Dropout Prevents Overfitting<a class="headerlink" href="#drop-it-to-improve-it-how-dropout-prevents-overfitting" title="Link to this heading">#</a></h1>
+<p>by Honey Angel Pabololot</p>
+<section id="introduction">
+<h2>🎯 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Deep learning models are powerful, but they often suffer from overfitting—performing well on training data but poorly on new data.
+A widely used solution is Dropout, a simple yet effective technique where random neurons are turned off during training to force the network to generalize better.</p>
+<p>This blog explores how different dropout rates affect training behavior, using actual experiment results from a CNN trained on MNIST.</p>
 </section>
-<section id="create-a-notebook-with-myst-markdown">
-<h2>Create a notebook with MyST Markdown<a class="headerlink" href="#create-a-notebook-with-myst-markdown" title="Link to this heading">#</a></h2>
-<p>MyST Markdown notebooks are defined by two things:</p>
+<section id="what-is-dropout">
+<h2>🔍 What Is Dropout?<a class="headerlink" href="#what-is-dropout" title="Link to this heading">#</a></h2>
+<p>Dropout was introduced by Srivastava et al. (2014) as a regularization technique for neural networks. Dropout randomly disables a fraction p of neurons during training.
+This prevents the model from depending too heavily on small sets of neurons. During training, every neuron has a probability  𝑝 of being “dropped” (set to zero).</p>
+<p>This creates many different “thinned networks” during training and prevents co-adaptation of features.</p>
+</section>
+<section id="why-it-works">
+<h2>Why it Works<a class="headerlink" href="#why-it-works" title="Link to this heading">#</a></h2>
+<p>✔ Prevents co-adaptation</p>
+<p>Neurons cannot rely on specific other neurons. They learn redundant, generalizable features.</p>
+<p>✔ Acts like training multiple models</p>
+<p>Each dropout configuration is like a new sub-model. The final model behaves like an ensemble, improving generalization.</p>
+<p>✔ Reduces overfitting</p>
+<p>When dropout is used correctly, test accuracy increases while training accuracy decreases slightly (which is good).</p>
+<p>Dropout improves:</p>
+<ul class="simple">
+<li><p>Generalization</p></li>
+<li><p>Model robustness</p></li>
+<li><p>Ensemble-like behavior</p></li>
+</ul>
+</section>
+<section id="experiment-setup">
+<h2>🧪 Experiment Setup<a class="headerlink" href="#experiment-setup" title="Link to this heading">#</a></h2>
+<p><strong>Dataset</strong>: MNIST</p>
+<p><strong>Model</strong>: Convolutional Neural Network (CNN)</p>
+<p><strong>Dropout Values Tested</strong>: 0.0, 0.2, 0.5, 0.7</p>
+<p><strong>Epochs</strong>: 5</p>
+<p><strong>Metrics</strong>: Training loss, validation loss, accuracy, runtime</p>
+</section>
+<section id="results">
+<h2>📊 Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h2>
+<section id="dropout-0-0">
+<h3>🔽 Dropout = 0.0<a class="headerlink" href="#dropout-0-0" title="Link to this heading">#</a></h3>
+<p>Training Loss: 0.0150</p>
+<p>Validation Loss: 0.0562</p>
+</section>
+<section id="test-accuracy">
+<h3>Test Accuracy<a class="headerlink" href="#test-accuracy" title="Link to this heading">#</a></h3>
+<p>✔ 98.93%</p>
+</section>
+<section id="runtime">
+<h3>Runtime<a class="headerlink" href="#runtime" title="Link to this heading">#</a></h3>
+<p>⏱ 629.55 seconds</p>
+</section>
+<section id="dropout-0-2">
+<h3>🔽 Dropout = 0.2<a class="headerlink" href="#dropout-0-2" title="Link to this heading">#</a></h3>
+<p>Training Loss: 0.0206</p>
+<p>Validation Loss: 0.0420</p>
+<section id="id1">
+<h4>Test Accuracy<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p>✔ 99.03%</p>
+</section>
+<section id="id2">
+<h4>Runtime<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<p>⏱ 661.27 seconds</p>
+</section>
+</section>
+<section id="dropout-0-5">
+<h3>🔽 Dropout = 0.5<a class="headerlink" href="#dropout-0-5" title="Link to this heading">#</a></h3>
+<p>Training Loss: 0.0341</p>
+<p>Validation Loss: 0.0420</p>
+<section id="id3">
+<h4>Test Accuracy<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<p>✔ 99.02%</p>
+</section>
+<section id="id4">
+<h4>Runtime<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<p>⏱ 645.39 seconds</p>
+</section>
+</section>
+<section id="dropout-0-7">
+<h3>🔽 Dropout = 0.7<a class="headerlink" href="#dropout-0-7" title="Link to this heading">#</a></h3>
+<p>Training Loss: 0.0529</p>
+<p>Validation Loss: 0.0430</p>
+<section id="id5">
+<h4>Test Accuracy<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<p>✔ 99.06%</p>
+</section>
+<section id="id6">
+<h4>Runtime<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<p>⏱ 684.78 seconds</p>
+</section>
+</section>
+</section>
+<section id="analysis-of-findings">
+<h2>🧠 Analysis of Findings<a class="headerlink" href="#analysis-of-findings" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>YAML metadata that is needed to understand if / how it should convert text files to notebooks (including information about the kernel needed).
-See the YAML at the top of this page for example.</p></li>
-<li><p>The presence of <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> directives, which will be executed with your book.</p></li>
+<li><p>Observations When Changing Dropout</p></li>
 </ol>
-<p>That’s all that is needed to get started!</p>
+<ul class="simple">
+<li><p>Low dropout (0.0–0.2):</p>
+<ul>
+<li><p>The model learned very quickly, as seen in the rapidly decreasing training loss.</p></li>
+<li><p>Validation loss initially decreased but then showed some fluctuations, indicating a risk of overfitting.</p></li>
+</ul>
+</li>
+<li><p>Moderate dropout (0.5):</p>
+<ul>
+<li><p>Training loss decreased more slowly, but validation loss remained stable across epochs.</p></li>
+<li><p>Test accuracy remained high (99.02%), showing a good balance between learning and generalization.</p></li>
+</ul>
+</li>
+<li><p>High dropout (0.7):</p>
+<ul>
+<li><p>Training loss decreased slower compared to lower dropout rates.</p></li>
+<li><p>Validation loss stayed consistent, indicating stable generalization, and test accuracy was slightly higher (99.06%).</p></li>
+<li><p>Runtime increased slightly due to more neurons being dropped per batch.</p></li>
+</ul>
+</li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Effect on Performance and Stability</p></li>
+</ol>
+<ul>
+<li><p>Performance:</p>
+<p>All dropout rates produced very high test accuracy (98.93%–99.06%), showing that the network is robust even with higher dropout.</p>
+</li>
+<li><p>Stability:</p>
+<p>Moderate to high dropout rates (0.2–0.7) improved stability of validation loss, reducing fluctuations and overfitting compared to no dropout (0.0).</p>
+</li>
+</ul>
+<p>Dropout helped the network generalize better, confirming its role as a regularization technique</p>
+<ol class="arabic simple" start="3">
+<li><p>Insights for Future Model Tuning</p></li>
+</ol>
+<ul class="simple">
+<li><p>Start with moderate dropout (0.2–0.5) for dense layers — it balances generalization and training speed.</p></li>
+<li><p>High dropout (0.7) can be used if overfitting is severe, but expect slower convergence.</p></li>
+<li><p>No dropout (0.0) can be risky for longer training or smaller datasets, as overfitting may occur.</p></li>
+<li><p>Always monitor validation loss and test accuracy, not just training loss, to choose the optimal dropout rate.</p></li>
+<li><p>Dropout can be combined with other regularization techniques for further improvements.</p></li>
+</ul>
 </section>
-<section id="quickly-add-yaml-metadata-for-myst-notebooks">
-<h2>Quickly add YAML metadata for MyST Notebooks<a class="headerlink" href="#quickly-add-yaml-metadata-for-myst-notebooks" title="Link to this heading">#</a></h2>
-<p>If you have a markdown file and you’d like to quickly add YAML metadata to it, so that Jupyter Book will treat it as a MyST Markdown Notebook, run the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">myst</span> <span class="n">init</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">markdownfile</span><span class="o">.</span><span class="n">md</span>
-</pre></div>
-</div>
+<section id="summary">
+<h2>Summary:<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>Dropout is simple yet highly effective. By selectively “forgetting” neurons during training, the network becomes more robust and generalizes better. Your experiment confirms that moderate dropout is usually the sweet spot, while very high dropout still works but slows training.</p>
+<p>This confirms the core idea behind dropout:</p>
+<p><strong>“Neural networks learn better when they forget a little.”</strong></p>
+<p>For detailed experimentation, see <a class="reference internal" href="dropout_experiment.html"><span class="std std-doc">Dropout Experiment</span></a>.</p>
 </section>
 </section>
 
@@ -478,6 +608,24 @@ See the YAML at the top of this page for example.</p></li>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Laboratory-Activity.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Laboratory Activity</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="dropout_experiment.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dropout Experiment</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -494,9 +642,33 @@ See the YAML at the top of this page for example.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">🎯 Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-dropout">🔍 What Is Dropout?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-it-works">Why it Works</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-setup">🧪 Experiment Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">📊 Results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropout-0-0">🔽 Dropout = 0.0</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-accuracy">Test Accuracy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime">Runtime</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropout-0-2">🔽 Dropout = 0.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Test Accuracy</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Runtime</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropout-0-5">🔽 Dropout = 0.5</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Test Accuracy</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Runtime</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropout-0-7">🔽 Dropout = 0.7</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Test Accuracy</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Runtime</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-of-findings">🧠 Analysis of Findings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary:</a></li>
 </ul>
   </nav></div>
 
