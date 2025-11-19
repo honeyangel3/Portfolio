@@ -18,10 +18,9 @@ chapters:
   title: Deep Learning Blog Post
 - file: dropout_experiment
   title: Dropout Experiment
-- title: Case Study
+- file: Case Study/week-1
+  title: Case Study
   sections:
-    - file: Case Study/week-1
-      title: Week 1
     - file: Case Study/week-2
       title: Week 2
     
