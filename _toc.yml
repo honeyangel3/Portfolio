@@ -19,7 +19,11 @@ chapters:
 - file: dropout_experiment
   title: Dropout Experiment
 - title: Case Study
+
+
   sections:
+
+  
     - file: Case Study/week-1
       title: Week 1
     - file: Case Study/week-2
